@@ -1,8 +1,6 @@
 from cgitb import text
 import random
-# import tkinter
 from tkinter import *
-# from tkinter import font
 
 
 window = Tk()
@@ -183,7 +181,7 @@ def EndGame_msg():
         result_msg_label.configure(text="        🤝🏻 Match Draw 🤝🏻            ")    
     
     continue_btn.configure(text= "Click to continue ..." , command=Game_Reset)       # "Click to continue ..." button appears after result
-    continue_btn.place(x=418, y=230)
+    continue_btn.place(x=416, y=230)
 
 
 # function to restart game
@@ -238,7 +236,7 @@ result_msg_label.place(x=370, y=420)
 
 continue_btn = Button(window, text="", font=("Arial Bold", 10), width=20, bg='#226300')       # after finishing match display "Click to continue ..." button 
 continue_btn.place(x=310, y=700)    # initially disappeared button, y=700, which is edge of the game box 
-# continue_btn.place(x=310, y=460)
+# continue_btn.place(x=418, y=230)  <--- actual position of button
 
 human_label = Label(window, text="YOU", font=("Arial Bold", 30), bg='#226300')          # Human player logo at right side
 human_label.place(x=775, y=180)
