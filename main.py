@@ -220,6 +220,7 @@ icon_3 = PhotoImage(file=r"D:\Coding files\Python\Scissor paper rock game\logos\
 icon_4 = PhotoImage(file=r"D:\Coding files\Python\Scissor paper rock game\logos\paper right.png")
 icon_5 = PhotoImage(file=r"D:\Coding files\Python\Scissor paper rock game\logos\scissor.png")
 icon_6 = PhotoImage(file=r"D:\Coding files\Python\Scissor paper rock game\logos\scissor right.png")
+# icon_6 = PhotoImage(file=r"<file path>\scissor right.png")
 
 
 computer_label = Label(window, text="BOT", font=("Arial Bold", 30), bg='#226300')       # BOT logo at left side
