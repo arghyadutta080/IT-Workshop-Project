@@ -1,4 +1,3 @@
-from cgitb import text
 import random
 from tkinter import *
 
@@ -15,11 +14,12 @@ wlcm_label = Label(window, text="Welcome to Scissor paper Rock game ...", font=(
 
 starting_label = Label(window, text="Enter how many rounds you want to play >>>",font=("Arial Bold", 13), bg='#226300', fg='white')
 starting_label.place(x=285, y=40)
-txt = Entry(window, width=5)        # Enter here the no of rounds you want to play
+
+txt = Entry(window, width=5)          # Enter here the no of rounds you want to play
 txt.place(x=655, y=41)
 
 
-count_you = 0       # initially scores of both Human player and Bot is 0
+count_you = 0                         # initially scores of both Human player and Bot is 0
 count_bot = 0
 
 
@@ -30,7 +30,7 @@ def scissor():
    global k
    global num
 
-   if k > 0:                    # indirectly it is working as a loop, so that player can play only 'k' no of rounds
+   if k > 0:                                    # indirectly it is working as a loop, so that player can play only 'k' no of rounds
     # human = 1
     bot = random.randint(1,3)
 
@@ -62,7 +62,7 @@ def scissor():
     if (round_count == num):        # if all rounds are done displays the game result through calling "Endgame_msg()" function
         EndGame_msg()
     
-    print(count_bot)    # for testing if codes are working properly or not, print the scores and round numbers (in reverse order) in terminal
+    print(count_bot)                # for testing if codes are working properly or not, print the scores and round numbers (in reverse order) in terminal
     print(count_you) 
     print(k)
 
@@ -165,7 +165,7 @@ def clicked():
     paper_btn.configure(command=paper)          # Those functions are restricted to not run before START button is clicked 
     rock_btn.configure(command=rock)
     
-    print("game going on")     # tests if START button is working or not 
+    print("game going on")                      # tests if START button is working or not 
         
 
 # function runs to display the result of game and "Click to continue ..." button
@@ -180,7 +180,7 @@ def EndGame_msg():
     else:
         result_msg_label.configure(text="        🤝🏻 Match Draw 🤝🏻            ")    
     
-    continue_btn.configure(text= "Click to continue ..." , command=Game_Reset)       # "Click to continue ..." button appears after result
+    continue_btn.configure(text= "Click to continue ..." , command=Game_Reset)                      # "Click to continue ..." button appears after result
     continue_btn.place(x=416, y=230)
 
 
@@ -189,7 +189,7 @@ def Game_Reset():
     global count_you
     global count_bot
 
-    start_btn.configure(text="Play Again")      # After resetting, START button is named as 'Play Again'
+    start_btn.configure(text="Play Again")                                       # After resetting, START button is named as 'Play Again'
     start_btn.place(x=440, y=72)
 
     count_bot = 0                                                                # resetting scores to 0
@@ -197,22 +197,22 @@ def Game_Reset():
     string = " BOT | YOU \n" + str(count_bot) + "   |   " + str(count_you)
     ScoreBoard_label.configure(text=string)
 
-    icon_1_label.configure(image=icon_1)        # resetting the rock images for both BOT and Human Player
+    icon_1_label.configure(image=icon_1)                                         # resetting the rock images for both BOT and Human Player
     icon_2_label.configure(image=icon_2)
 
     continue_btn.configure(text= "" )
-    continue_btn.place(x=350, y=700)        # hiding "Click to continue ..." button
+    continue_btn.place(x=350, y=700)                                             # hiding "Click to continue ..." button
 
-    result_msg_label.configure(text="")     # 'message result' and 'Round no' is resetting to reset screen
+    result_msg_label.configure(text="")                                          # 'message result' and 'Round no' is resetting to reset screen
     round_label.configure(text="")
 
 
 
-start_btn = Button(window, text="START", font=("Arial Bold", 15), command=clicked)          # START button to start the game
+start_btn = Button(window, text="START", font=("Arial Bold", 15), command=clicked)                          # START button to start the game
 start_btn.place(x=460, y=72)
 
 
-icon_1 = PhotoImage(file=r"./logos/rock.png")                # All Scissor, paper and Rock logos
+icon_1 = PhotoImage(file=r"./logos/rock.png")                                                               # All Scissor, paper and Rock logos
 icon_2 = PhotoImage(file=r"./logos/rock right.png")
 icon_3 = PhotoImage(file=r"./logos/paper.png")
 icon_4 = PhotoImage(file=r"./logos/paper right.png")
@@ -220,30 +220,34 @@ icon_5 = PhotoImage(file=r"./logos/scissor.png")
 icon_6 = PhotoImage(file=r"./logos/scissor right.png")
 
 
-computer_label = Label(window, text="BOT", font=("Arial Bold", 30), bg='#226300')       # BOT logo at left side
+computer_label = Label(window, text="BOT", font=("Arial Bold", 30), bg='#226300')                           # BOT logo at left side
 computer_label.place(x=130, y=180)
 icon_1_label = Label(window, image=icon_1, bg='#226300')
 icon_1_label.pack(side="left")
 
-round_label = Label(window, text="    ", font=("Arial Bold", 22), fg="yellow", bg='#226300')            # displays 'Round X'
+
+round_label = Label(window, text="    ", font=("Arial Bold", 22), fg="yellow", bg='#226300')                # displays 'Round X'
 round_label.place(x=420, y=290)
-ScoreBoard_label = Label(window, text=" BOT | YOU \n0   |   0", font=("Arial Bold", 20), fg="blue")     # displays Score Board
+ScoreBoard_label = Label(window, text=" BOT | YOU \n0   |   0", font=("Arial Bold", 20), fg="blue")         # displays Score Board
 ScoreBoard_label.place(x=420, y=330)
 
-result_msg_label = Label(window, text="", font=("Arial Bold", 15), fg="yellow", bg='#226300')           # displays match win / loss / draw
+
+result_msg_label = Label(window, text="", font=("Arial Bold", 15), fg="yellow", bg='#226300')               # displays match win / loss / draw
 result_msg_label.place(x=370, y=420)
 
-continue_btn = Button(window, text="", font=("Arial Bold", 10), width=20, bg='#226300')       # after finishing match display "Click to continue ..." button 
+
+continue_btn = Button(window, text="", font=("Arial Bold", 10), width=20, bg='#226300')                     # after finishing match display "Click to continue ..." button 
 continue_btn.place(x=310, y=700)    # initially disappeared button, y=700, which is edge of the game box 
 # continue_btn.place(x=418, y=230)  <--- actual position of button
 
-human_label = Label(window, text="YOU", font=("Arial Bold", 30), bg='#226300')          # Human player logo at right side
+
+human_label = Label(window, text="YOU", font=("Arial Bold", 30), bg='#226300')                              # Human player logo at right side
 human_label.place(x=775, y=180)
 icon_2_label = Label(window, image=icon_2, bg='#226300')
 icon_2_label.pack(side="right")
 
 
-scissor_btn = Button(window, text="SCISSOR",font=("Arial Bold", 15), width=9)       # Scissor, Paper and Rock button to choose manually
+scissor_btn = Button(window, text="SCISSOR",font=("Arial Bold", 15), width=9)                           # Scissor, Paper and Rock button to choose manually
 scissor_btn.place(x=330-14, y=600)
 paper_btn = Button(window, text="PAPER",font=("Arial Bold", 15), width=9)
 paper_btn.place(x=458-14, y=600)
