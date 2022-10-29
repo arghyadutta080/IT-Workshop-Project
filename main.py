@@ -212,13 +212,12 @@ start_btn = Button(window, text="START", font=("Arial Bold", 15), command=clicke
 start_btn.place(x=460, y=72)
 
 
-icon_1 = PhotoImage(file=r"D:\Coding files\Python\Scissor paper rock game\logos\rock.png")                # All Scissor, paper and Rock logos
-icon_2 = PhotoImage(file=r"D:\Coding files\Python\Scissor paper rock game\logos\rock right.png")
-icon_3 = PhotoImage(file=r"D:\Coding files\Python\Scissor paper rock game\logos\paper.png")
-icon_4 = PhotoImage(file=r"D:\Coding files\Python\Scissor paper rock game\logos\paper right.png")
-icon_5 = PhotoImage(file=r"D:\Coding files\Python\Scissor paper rock game\logos\scissor.png")
-icon_6 = PhotoImage(file=r"D:\Coding files\Python\Scissor paper rock game\logos\scissor right.png")
-# icon_6 = PhotoImage(file=r"<file path>\scissor right.png")
+icon_1 = PhotoImage(file=r"./logos/rock.png")                # All Scissor, paper and Rock logos
+icon_2 = PhotoImage(file=r"./logos/rock right.png")
+icon_3 = PhotoImage(file=r"./logos/paper.png")
+icon_4 = PhotoImage(file=r"./logos/paper right.png")
+icon_5 = PhotoImage(file=r"./logos/scissor.png")
+icon_6 = PhotoImage(file=r"./logos/scissor right.png")
 
 
 computer_label = Label(window, text="BOT", font=("Arial Bold", 30), bg='#226300')       # BOT logo at left side
