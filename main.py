@@ -247,7 +247,7 @@ icon_2_label = Label(window, image=icon_2, bg='#226300')
 icon_2_label.pack(side="right")
 
 
-scissor_btn = Button(window, text="SCISSOR",font=("Arial Bold", 15), width=9)                           # Scissor, Paper and Rock button to choose manually
+scissor_btn = Button(window, text="SCISSOR",font=("Arial Bold", 15), width=9)                               # Scissor, Paper and Rock button to choose manually
 scissor_btn.place(x=330-14, y=600)
 paper_btn = Button(window, text="PAPER",font=("Arial Bold", 15), width=9)
 paper_btn.place(x=458-14, y=600)
