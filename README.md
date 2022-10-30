@@ -1,7 +1,6 @@
 # Scissor-Paper-Rock Game
 This game is createde using `Python` language along with `TKinter` library
 ## How to play this game
-Steps to run:- 
 1. Fork this Repository
 2. Clone this repository into your computer
 3. Open the Repository in VS Code
