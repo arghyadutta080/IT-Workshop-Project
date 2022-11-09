@@ -180,7 +180,7 @@ def EndGame_msg():
     else:
         result_msg_label.configure(text="        🤝🏻 Match Draw 🤝🏻            ")    
     
-    continue_btn.configure(text= "Click to continue ..." , command=Game_Reset)                      # "Click to continue ..." button appears after result
+    continue_btn.configure(text= "Click to continue ..." , command=Game_Reset)                       # "Click to continue ..." button appears after result
     continue_btn.place(x=416, y=230)
 
 
